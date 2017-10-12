@@ -1,0 +1,51 @@
+###NOT COMPLETE WILL DO IT OVER WEEKEND -- 12/10/2017
+
+##Program name: bookreviews1.py
+##The program below reads a dataset containing reviews of Donna Tartt’s The Goldfinch in the Amazon book review. 
+##These reviews have been stored in a simple tab separated file, which is nothing more than a plain text file with columns. 
+##The table contains four columns: review score, url, review title and review text.
+##Your task is to put comments on each line explaining what it does. 
+##First few lines are already commented for you. You can put a copy of the code in your GitHub account with the comments in it. Thanks.  
+
+#Import required library
+import urllib.request
+
+#Load the data from remote location (URL)
+file = urllib.request.urlopen("https://gist.githubusercontent.com/twielfaert/a0972bf366d9aaf6cb1206c16bf93731/raw/dde46ad1fa41f442971726f34ad03aaac85f5414/Donna-Tartt-The-Goldfinch.csv")
+
+f = file.read()
+
+#Transform the bitstream into strings
+text = f.decode(encoding='utf-8',errors='ignore')
+
+#Split the string at the end of the lines 
+lines = text.split("\n")
+
+#creating an empty list
+counts = dict()
+counter = 0
+
+#..(haven't finished)
+for line in lines:
+  l = line.strip().split("\t")
+  
+#making a framework where stuff is going to be organised into. The document has scores,reviews etc.
+## And he's pulled where they are. COME BACK TO THIS BIT
+  score = l[0] 
+  id = l[1]
+  title = l[2]
+  review = l[3]
+  
+  #counting stuff
+  counts[score] = counts.get(score, 0) + 1
+  counter = counter + 1 
+
+#print lines and counters converted to strings
+print(str(counter))
+print(str(len(lines)))
+
+# printing the keys and values in the count dictionary
+for key, val in counts.items():
+    print (key, val)
+
+
