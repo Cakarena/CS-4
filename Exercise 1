@@ -30,7 +30,7 @@ for line in lines:
   l = line.strip().split("\t")
   
 #making a framework where stuff is going to be organised into. The document has scores,reviews etc.
-## And he's pulled where they are. COME BACK TO THIS BIT
+## That l looks like a 1 it's a confusing name to give it. 
   score = l[0] 
   id = l[1]
   title = l[2]
@@ -42,7 +42,7 @@ for line in lines:
 
 #print lines and counters converted to strings
 print(str(counter))
-print(str(len(lines)))
+print(str(len(lines)))#print the number of lines in the file
 
 # printing the keys and values in the count dictionary
 for key, val in counts.items():
