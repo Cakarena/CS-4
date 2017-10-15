@@ -41,10 +41,12 @@ for line in lines:
   counter = counter + 1 
 
 #print lines and counters converted to strings
+#print the number of lines in the file
 print(str(counter))
-print(str(len(lines)))#print the number of lines in the file
+print(str(len(lines)))
 
 # printing the keys and values in the count dictionary
+#gives you how many lines for each score, print it out its scores of 1-5.
 for key, val in counts.items():
     print (key, val)
 
