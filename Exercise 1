@@ -29,7 +29,7 @@ counter = 0
 for line in lines:
   l = line.strip().split("\t")
   
-#making a framework where stuff is going to be organised into. The document has scores,reviews etc.
+#making a framework where stuff is going to be organised into. eg in order of output  score, id, title, review, The document has scores,reviews etc.
 ## That l looks like a 1 it's a confusing name to give it. 
   score = l[0] 
   id = l[1]
